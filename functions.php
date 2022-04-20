@@ -1,8 +1,7 @@
 <?php
 function checkLogin($con){
     if(isset($_SESSION['user_id'])){
-        $id = $_SESSION["user_id"];
-        $query = "select * from user_accounts where user_id = '$id' limit 1";
+        $query = "select * from user_accounts where user_id = '" . $_SESSION['user_id'] . "' limit 1";
 
         $result = mysqli_query($con,$query);
         if($result && mysqli_num_rows($result) > 0){
@@ -13,6 +12,17 @@ function checkLogin($con){
     //Error
     header("location: login.php");
     die;
+}
+
+function checkSession($con){
+    if(isset($_SESSION['user_id'])){
+        $query = "select * from user_accounts where user_id = '" . $_SESSION['user_id'] . "' limit 1";
+        $result = mysqli_query($con,$query);
+
+        return mysqli_num_rows($result) > 0;
+    }else{
+        return false;
+    }
 }
 
 function random_num($num){
