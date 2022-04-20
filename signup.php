@@ -1,8 +1,8 @@
 <?php
+    session_start();
+
     include("connection.php");
     include("functions.php");
-
-    session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -45,6 +45,7 @@
                             mysqli_free_result($result);
                             $_SESSION['user_id'] = $user_id;
                             header("location: index.php");
+                            die;
                         }
                     }else{
                         echo "<p id='form-error'>Some information are empty.</p>";
