@@ -39,10 +39,9 @@
                             echo "<p id='form-error'>Username already exists, make something unique.</p>";
                         }else{
                             $user_id = random_num(5);
-                            $query = "insert into user_accounts (user_id, user_name, user_password, user_fullname) values ('$user_id', '$username', '$password', '$name');";
+                            $query = "INSERT INTO user_accounts (user_id, user_name, user_password, user_fullname, privileges, note) VALUES ('$user_id', '$username', '$password', '$name', 'user', 'Hello I am $name');";
                             mysqli_query($con, $query);
                             
-                            mysqli_free_result($result);
                             $_SESSION['user_id'] = $user_id;
                             header("location: index.php");
                             die;
