@@ -17,7 +17,7 @@
             <h2>Sign In</h2>
             <form action="login.php" method="post">
                 <label>Username:</label>
-                <input type="text" name="log_username">
+                <input type="text" name="log_username" value="<?php echo $_POST['log_username'];?>">
                 <br>
                 <label>Password:</label>
                 <input type="password" name="log_password">

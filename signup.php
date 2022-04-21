@@ -14,13 +14,13 @@
             <h2>Sign Up</h2>
             <form action="signup.php" method="post">
                 <label>Name:</label>
-                <input type="text" name="sign_name">
+                <input type="text" name="sign_name" value="<?php echo $_POST['sign-name']?>">
                 <br>
                 <label>Username:</label>
                 <input type="text" name="sign_username">
                 <br>
                 <label>Password:</label>
-                <input type="password" name="sign_password">
+                <input type="password" name="sign_password" value="<?php echo $_POST['sign-password']?>">
                 <br>
                 <input type="submit" name="submit" value="Submit">
             </form>
