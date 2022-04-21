@@ -38,7 +38,7 @@
         <h3>Welcome, <?php echo $_userdata['user_fullname'];?></h3>
         <h5>Username: <?php echo $_userdata['user_name'];?></h5>
         <a href="logout.php">Log Out</a>
-        <a id="myBtn">Remove Account</a>
+        <a id="myBtn" href="">Remove Account</a>
     </body>
     <script src="user_dashboard.js"></script>
 </html>
