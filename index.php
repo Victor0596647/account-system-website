@@ -13,28 +13,25 @@
     </head>
     <body>
         <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <form action="index.php" method="post">
-            <h4>Do you want to remove this account from the database?</h4>
-            <input type="submit" name="choice" value="yes" placeholder="Yes">
-            <input type="submit" name="choice" value="no" placeholder="No" onclick="modal.style.display = 'none';">
-          </form>
-          <?php
-            if(isset($_POST['choice'])){
-              if($_POST['choice'] == "yes"){
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <form action="index.php" method="post">
+              <h4>Do you want to remove this account from the database?</h4>
+              <input type="submit" name="choice" value="Yes">
+            </form>
+            <input type="button" value="No" onclick="modal.style.display = 'none';">
+            <?php
+              if(isset($_POST['choice'])){
+                if($_POST['choice'] == "Yes"){
                   $query = "DELETE FROM user_accounts WHERE user_id = '".$_SESSION['user_id']."'";
                   mysqli_query($con,$query);
                   session_destroy();
                   header("location: login.php");
                   die;
+                }
               }
-            }
-          ?>
-        </div>
-
+            ?>
+          </div>
         </div>
         <h1>Account Dashboard</h1>
         <hr>
