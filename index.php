@@ -18,8 +18,8 @@
             <form action="index.php" method="post">
               <h4>Do you want to remove this account from the database?</h4>
               <input type="submit" name="choice" value="Yes">
-              <input type="submit" name="choice" value="No" onclick="modal.style.display = 'none';">
             </form>
+            <input type="button" value="No" onclick="modal.style.display = 'none';">
             <?php
               if(isset($_POST['choice'])){
                 if($_POST['choice'] == "Yes"){
