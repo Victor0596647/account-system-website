@@ -9,7 +9,7 @@
         header("location: index.php");
         die;
     }else{
-        $query = "select userid,user_name,user_password,name from user_accounts order by date_creation";
+        $query = "select user_id,user_name,user_password,user_fullname,date from user_accounts order by date";
         $result = mysqli_query($con, $query);
         $users = mysqli_fetch_all($result,MYSQLI_ASSOC);
     }
@@ -25,7 +25,7 @@
         <hr>
         <div class="data-container">
             <div class="user-population">
-                <h3>Users: <?php echo sizeof($users['userid']) ?></h3>
+                <h3>Users: <?php echo sizeof($users['user_id']) ?></h3>
             </div>
         </div>
         <a href="logout.php">Log Out</a>
