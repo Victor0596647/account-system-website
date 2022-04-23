@@ -4,6 +4,10 @@
     include("connection.php");
     include("functions.php");
     $_userdata = checkLogin($con);
+    
+    if($_userdata['privileges'] == "admin"){
+      header("location: admin.php");
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,8 +22,8 @@
             <form action="index.php" method="post">
               <h4>Do you want to remove this account from the database?</h4>
               <input type="submit" name="choice" value="Yes">
+              <input type="button" value="No" onclick="modal.style.display = 'none';">
             </form>
-            <input type="button" value="No" onclick="modal.style.display = 'none';">
             <?php
               if(isset($_POST['choice'])){
                 if($_POST['choice'] == "Yes"){
@@ -33,12 +37,13 @@
             ?>
           </div>
         </div>
+
         <h1>Account Dashboard</h1>
         <hr>
         <h3>Welcome, <?php echo $_userdata['user_fullname'];?></h3>
         <h5>Username: <?php echo $_userdata['user_name'];?></h5>
         <a href="logout.php">Log Out</a>
-        <a id="myBtn">Remove Account</a>
+        <a id="myBtn" href="#">Remove Account</a>
     </body>
     <script src="user_dashboard.js"></script>
 </html>
