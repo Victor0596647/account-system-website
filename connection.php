@@ -1,8 +1,8 @@
 <?php
-    $dbhost = getenv("MYSQL_ADDON_HOST");
-    $dbuser = getenv("MYSQL_ADDON_USER");
-    $dbpass = getenv("MYSQL_ADDON_PASSWORD");
-    $dbname = getenv("MYSQL_ADDON_DB");
+    $dbhost = getenv("DB_HOST");
+    $dbuser = getenv("DB_USER");
+    $dbpass = getenv("DB_PASSWORD");
+    $dbname = getenv("DB_NAME");
     $con = new mysqli($dbhost,$dbuser,$dbpass,$dbname);
     
     if(!$con){
