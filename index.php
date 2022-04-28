@@ -1,8 +1,8 @@
 <?php
     session_start();
 
-    include("connection.php");
-    include("functions.php");
+    require("connection.php");
+    require("functions.php");
     $_userdata = checkLogin($con);
     
     if($_userdata['privileges'] == "admin"){
