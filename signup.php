@@ -8,6 +8,7 @@
 <html>
     <head>
         <title>asw | Sign Up</title>
+        <link rel='stylesheet' type='text/css' href='signin-up.css'>
     </head>
     <body>
         <div class="form-container">

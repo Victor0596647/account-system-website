@@ -1,0 +1,18 @@
+body {
+    background-image: url('img/alessio-soggetti-cfKC0UOZHJo-unsplash.jpg');
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-container {
+    display:flex;
+    justify-content: center;
+    background-color: rgb(127, 157, 255);
+    width:-moz-fit-content;
+    width:fit-content;
+}
+
+#form-error {
+    border-radius: 4px; 
+    border-color: red;
+    background-color: rgb(255, 143, 143);
+}
