@@ -36,6 +36,9 @@
             <div class="admin-population">
                 <h3>Admins: <?php echo $admins ?></h3>
             </div>
+            <div class="total-population">
+                <h3>Total: <?php echo $users + $admins ?></h3>
+            </div>
         </div>
         <a href="logout.php">Log Out</a>
     </body>
