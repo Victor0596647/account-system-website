@@ -1,5 +1,6 @@
 body {
     background-image: url('img/alessio-soggetti-cfKC0UOZHJo-unsplash.jpg');
+    background-size: cover;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
