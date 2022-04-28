@@ -16,7 +16,7 @@
     $users = mysqli_num_rows($result);
     mysqli_free_result($result);
 
-    $query = "select * from user_accounts where privileges = admin'";
+    $query = "select * from user_accounts where privileges = 'admin'";
     $result = mysqli_query($con, $query);
     $admins = mysqli_num_rows($result);
 ?>
