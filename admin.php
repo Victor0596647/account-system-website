@@ -14,6 +14,11 @@
     $query = "select * from user_accounts where privileges = 'user'";
     $result = mysqli_query($con, $query);
     $users = mysqli_num_rows($result);
+    mysqli_free_result($result);
+
+    $query = "select * from user_accounts where privileges = admin'";
+    $result = mysqli_query($con, $query);
+    $admins = mysqli_num_rows($result);
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,6 +32,9 @@
         <div class="data-container">
             <div class="user-population">
                 <h3>Users: <?php echo $users ?></h3>
+            </div>
+            <div class="admin-population">
+                <h3>Admins: <?php echo $admins ?></h3>
             </div>
         </div>
         <a href="logout.php">Log Out</a>
