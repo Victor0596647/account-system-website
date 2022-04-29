@@ -36,11 +36,14 @@ body {
     text-decoration: none;
 }
 
+.main-content {
+    margin-top:100px;
+}
+
 .data-container {
     margin:auto;
     width:-moz-fit-content;
     width:fit-content;
-    margin-top:100px;
     text-align: center;
     color:aliceblue;
     font-weight: 500;

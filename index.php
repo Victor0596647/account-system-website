@@ -37,15 +37,19 @@
             ?>
           </div>
         </div>
-
         <div class="dash-header">
-            <div id="dash-title"><h1>User Dashboard</h1></div>
-            <div id="logout"><p><a href="logout.php">Log Out</a></p></div>
-            <div id="removeacc"><p>Remove Account</p></div>
+            <div id="dash-title">
+                <h1>User Dashboard</h1>
+            </div>
+            <div class="account-function">
+                <div id="logout" onclick="<?php header('location: login.php') ?>"><p>Log Out</p></div>
+                <div id="removeacc"><p>Remove Account</p></div>
+            </div>
         </div>
-        <h2>Welcome, <?php echo $_userdata['user_fullname'];?></h2>
-        <h5>Username: <?php echo $_userdata['user_name'];?></h5>
-
+        <div class="main-content">
+            <h2>Welcome, <?php echo $_userdata['user_fullname'] ?></h2>
+            <h5>Username: <?php echo $_userdata['user_name'] ?></h5>
+        </div>
     </body>
     <script src="user_dashboard.js"></script>
 </html>

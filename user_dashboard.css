@@ -21,23 +21,28 @@ body {
   color:white;
 }
 
+.account-function {
+  display:flex;
+}
+
 #logout,#removeacc {
   width:83px;
   height:-moz-fit-content;
   height:fit-content;
   text-align: center;
+  cursor:pointer;
   font-weight: 600;
   background-color: rgb(207, 64, 64);
   border-radius: 6px;
 }
 
-#logout a:link , #logout a:visited {
-  color:white;
-  text-decoration: none;
+#removeacc {
+  width:145px;
+  margin-left: 24px;
 }
 
-#removeacc {
-  cursor:pointer;
+.main-content {
+  margin-top:100px;
 }
 
 /* The Modal (background) */
