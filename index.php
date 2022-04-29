@@ -42,7 +42,7 @@
                 <h1>User Dashboard</h1>
             </div>
             <div class="account-function">
-                <div id="logout" onclick="<?php header('location: login.php') ?>"><p>Log Out</p></div>
+                <div id="logout" onclick="location.replace('logout.php')"><p>Log Out</p></div>
                 <div id="removeacc"><p>Remove Account</p></div>
             </div>
         </div>
