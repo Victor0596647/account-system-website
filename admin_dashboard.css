@@ -33,6 +33,7 @@ body {
     font-weight: 600;
     background-color: rgb(207, 64, 64);
     border-radius: 6px;
+    cursor:pointer;
 }
 
 .main-content {
