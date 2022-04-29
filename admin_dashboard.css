@@ -1,0 +1,64 @@
+body {
+    background-image: url('img/alessio-soggetti-cfKC0UOZHJo-unsplash.jpg');
+    background-size: cover;
+    background-position: 50% 20%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dash-header {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: rgb(22, 133, 230);
+    padding-left: 15px;
+    padding-right: 15px;
+    height:-moz-fit-content;
+    height:fit-content;
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    color:white;
+}
+
+#logout {
+    width:83px;
+    height:-moz-fit-content;
+    height:fit-content;
+    text-align: center;
+    font-weight: 600;
+    background-color: rgb(207, 64, 64);
+    border-radius: 6px;
+}
+
+#logout a:link , #logout a:visited {
+    color:white;
+    text-decoration: none;
+}
+
+.data-container {
+    margin:auto;
+    width:-moz-fit-content;
+    width:fit-content;
+    margin-top:100px;
+    text-align: center;
+    color:aliceblue;
+    font-weight: 500;
+}
+
+.specific-population {
+    display:flex;
+    justify-content: center;
+}
+
+.total-population, .specific-population div {
+    padding:10px;
+    margin:15px;
+    background-color: rgb(45, 140, 223);
+    border-radius: 5px;
+    min-width: 150px;
+}
+
+.total-population {
+    min-width: inherit;
+}

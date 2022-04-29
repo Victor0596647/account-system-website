@@ -24,22 +24,31 @@
 <html>
     <head>
         <title>asw | Admin</title>
-        <link rel="stylesheet" type="text/css" href="user_dashboard.css">
+        <link rel="stylesheet" type="text/css" href="admin_dashboard.css">
     </head>
     <body>
-        <h1>Admin Dashboard</h1>
-        <hr>
+        <div class="dash-header">
+            <div id="dash-title"><h1>Admin Dashboard</h1></div>
+            <div id="logout"><p><a href="logout.php">Log Out</a></p></div>
+        </div>
         <div class="data-container">
-            <div class="user-population">
-                <h3>Users: <?php echo $users ?></h3>
-            </div>
-            <div class="admin-population">
-                <h3>Admins: <?php echo $admins ?></h3>
-            </div>
             <div class="total-population">
-                <h3>Total: <?php echo $users + $admins ?></h3>
+                <h2><?php echo $users + $admins ?></h2>
+                <hr>
+                <p>Total</p>
+            </div>
+            <div class="specific-population">
+                <div class="user-population">
+                    <h2><?php echo $users ?></h2>
+                    <hr>
+                    <p>Users</p>
+                </div>
+                <div class="admin-population">
+                    <h2><?php echo $admins ?></h2>
+                    <hr>
+                    <p>Admins</p>
+                </div>
             </div>
         </div>
-        <a href="logout.php">Log Out</a>
     </body>
 </html>
