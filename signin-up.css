@@ -26,7 +26,7 @@ h2 {
 }
 
 a:link, a:visited {
-    color: rgb(137, 138, 211);
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
@@ -41,17 +41,16 @@ label {
 }
 
 input[type=text], input[type=password]{
-    background-color: rgba(255, 255, 255, 0.225);
     border:none;
     border-bottom: 3px solid rgb(46, 46, 46);
+    border-radius:4px;
     transition:all 0.4s;
 }
 input[type=text]:focus, input[type=password]:focus{
-    background-color: rgba(255, 255, 255, 0.650);
     border-bottom: 3px solid rgb(0, 0, 0);
 }
 input[type=submit]{
-    background-color: #5d85c0;
+    background-color: #2a70d8;
     border: none;
     color: white;
     padding: 8px 16px;
@@ -62,11 +61,11 @@ input[type=submit]{
 }
 
 input[type=submit]:hover{
-    background-color: #2a70d8;
+    background-color: #5d85c0;
 }
 
 #form-error {
     padding:5px;
     border-radius: 4px;
-    background-color: rgb(255, 143, 143);
+    background-color: rgb(255, 111, 111);
 }
