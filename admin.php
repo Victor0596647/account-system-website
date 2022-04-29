@@ -29,7 +29,9 @@
     <body>
         <div class="dash-header">
             <div id="dash-title"><h1>Admin Dashboard</h1></div>
-            <div id="logout"><p><a href="logout.php">Log Out</a></p></div>
+            <div class="account-function">
+                <div id="logout" onclick="location.replace('logout.php')"><p>Log Out</p></div>
+            </div>
         </div>
         <div class="main-content">
             <div class="data-container">

@@ -21,6 +21,10 @@ body {
     color:white;
 }
 
+.account-function {
+    display:flex;
+}
+
 #logout {
     width:83px;
     height:-moz-fit-content;
@@ -29,11 +33,6 @@ body {
     font-weight: 600;
     background-color: rgb(207, 64, 64);
     border-radius: 6px;
-}
-
-#logout a:link , #logout a:visited {
-    color:white;
-    text-decoration: none;
 }
 
 .main-content {
