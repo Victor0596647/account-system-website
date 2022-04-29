@@ -19,12 +19,14 @@ h2 {
     margin: auto;
     align-items: center;
     padding: 20px;
-    background-color: rgb(127, 157, 255);
+    background-color: rgb(45, 140, 223);
+    color: white;
     border-radius:4px;
-    min-width: 500px;
+    min-width: 350px;
 }
 
-a:link {
+a:link, a:visited {
+    color: rgb(137, 138, 211);
     text-decoration: none;
 }
 
