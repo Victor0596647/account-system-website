@@ -16,13 +16,13 @@
         <link rel="stylesheet" type="text/css" href="user_dashboard.css">
     </head>
     <body>
-        <div id="myModal" class="modal">
-          <div class="modal-content">
-            <span class="close">&times;</span>
+        <div id="prompt" class="prompt">
+          <div class="prompt-content" id="prompt-content">
+            <span id="close">&times;</span>
             <form action="index.php" method="post">
               <h4>Do you want to remove this account from the database?</h4>
               <input type="submit" name="choice" value="Yes">
-              <input type="button" value="No" onclick="modal.style.display = 'none';">
+              <input type="button" value="No" onclick="promptBg.style.display = 'none'">
             </form>
             <?php
               if(isset($_POST['choice'])){
@@ -47,8 +47,20 @@
             </div>
         </div>
         <div class="main-content">
-            <h2>Welcome, <?php echo $_userdata['user_fullname'] ?></h2>
-            <h5>Username: <?php echo $_userdata['user_name'] ?></h5>
+            <h2>Welcome, <?php echo $_userdata['user_fullname']?></h2>
+            <div class="user-note">
+                <form action="index.php" method="post">
+                    <textarea id="note" name="note" placeholder="write something about yourself..." cols="40" rows="10"><?php echo $_userdata['note']?></textarea><br>
+                    <input type="submit" value="Update" name="submit" />
+                </form>
+                <?php
+                  if(isset($_POST['submit'])){
+                    $note = filter_input(INPUT_POST, 'note', FILTER_SANITIZE_SPECIAL_CHARS);
+                    $query = "UPDATE user_accounts SET note = 'i luv cookie so muuuuucccchhhh!!!' WHERE user_id = " . $_userdata['user_id'];
+                    mysqli_query($con,$query);
+                  }
+                ?>
+            </div>
         </div>
     </body>
     <script src="user_dashboard.js"></script>

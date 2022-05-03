@@ -42,12 +42,37 @@ body {
 }
 
 .main-content {
+  display:flex;
+  flex-direction: column;
+  margin:auto;
   margin-top:100px;
+  background-color: lightblue;
+  border-radius: 5px;
+  max-width: 550px;
+  justify-content: center;
+  align-items: center;
+  padding:4px;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
+button,input[type=button],input[type=submit] {
+  background-color: #2a70d8;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition:all 0.4s;
+}
+
+.user-note textarea {
+  outline:none;
+  resize:none;
+}
+
+.prompt {
+  display:none;
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   padding-top: 250px; /* Location of the box */
@@ -58,29 +83,29 @@ body {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  transition: all 400ms;
 }
 
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
+.prompt-content {
+  background-color: rgb(195, 227, 255);
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
+  border: 1px solid rgb(112, 139, 163);
+  border-radius:6px;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
+#close {
+  color: #0099ff;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
+#close:hover,
+#close:focus {
+  color: rgb(53, 110, 117);
   text-decoration: none;
   cursor: pointer;
 }
