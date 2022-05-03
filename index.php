@@ -58,6 +58,8 @@
                     $note = filter_input(INPUT_POST, 'note', FILTER_SANITIZE_SPECIAL_CHARS);
                     $query = "UPDATE user_accounts SET note = '$note' WHERE user_id = " . $_userdata['user_id'];
                     mysqli_query($con,$query);
+                    header("location: index.php");
+                    die;
                   }
                 ?>
             </div>
