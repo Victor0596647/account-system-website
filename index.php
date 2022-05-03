@@ -56,7 +56,7 @@
                 <?php
                   if(isset($_POST['submit'])){
                     $note = filter_input(INPUT_POST, 'note', FILTER_SANITIZE_SPECIAL_CHARS);
-                    $query = "UPDATE user_accounts SET note = 'i luv cookie so muuuuucccchhhh!!!' WHERE user_id = " . $_userdata['user_id'];
+                    $query = "UPDATE user_accounts SET note = '$note' WHERE user_id = " . $_userdata['user_id'];
                     mysqli_query($con,$query);
                   }
                 ?>
