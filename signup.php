@@ -37,7 +37,7 @@
                         $result = mysqli_query($con,$query);
                         $matchFound = mysqli_num_rows($result) > 0;
                         if($matchFound){
-                            echo "<p id='form-error'>Username already exists, make something unique.</p>";
+                            echo "<p id='form-error'>Username already exists, make something unique</p>";
                         }else{
                             $user_id = random_num(5);
                             $query = "INSERT INTO user_accounts (user_id, user_name, user_password, user_fullname, privileges, note) VALUES ('$user_id', '$username', '$password', '$name', 'user', 'Hello I am $name');";
@@ -48,7 +48,7 @@
                             die;
                         }
                     }else{
-                        echo "<p id='form-error'>Some information are empty.</p>";
+                        echo "<p id='form-error'>Some information are empty</p>";
                     }
                 }
             ?>

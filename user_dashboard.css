@@ -3,6 +3,7 @@ body {
   background-size: cover;
   background-position: 50% 20%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px;
 }
 
 .dash-header {
@@ -14,10 +15,7 @@ body {
   padding-right: 15px;
   height:-moz-fit-content;
   height:fit-content;
-  position:absolute;
-  top:0;
-  right:0;
-  left:0;
+  position:relative;
   color:white;
 }
 
@@ -45,7 +43,6 @@ body {
   display:flex;
   flex-direction: column;
   margin:auto;
-  margin-top:100px;
   background-color: lightblue;
   border-radius: 5px;
   max-width: 550px;
@@ -69,6 +66,7 @@ button,input[type=button],input[type=submit] {
 .user-note textarea {
   outline:none;
   resize:none;
+  border: none;
 }
 
 .prompt {

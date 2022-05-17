@@ -3,6 +3,7 @@ body {
     background-size: cover;
     background-position: 50% 20%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
 }
 
 .dash-header {
@@ -14,10 +15,7 @@ body {
     padding-right: 15px;
     height:-moz-fit-content;
     height:fit-content;
-    position:absolute;
-    top:0;
-    right:0;
-    left:0;
+    position: relative;
     color:white;
 }
 
@@ -34,10 +32,6 @@ body {
     background-color: rgb(207, 64, 64);
     border-radius: 6px;
     cursor:pointer;
-}
-
-.main-content {
-    margin-top:100px;
 }
 
 .data-container {

@@ -28,7 +28,7 @@
             <a href="signup.php">Don't have an account?</a>
             <?php
                 if(isset($_POST['submit'])){
-                    $username = filter_input(INPUT_POST,'log_username',FILTER_SANITIZE_SPECIAL_CHARS);
+                    $username = filter_input(INPUT_POST, 'log_username', FILTER_SANITIZE_SPECIAL_CHARS);
                     $userpass = $_POST['log_password'];
                     if(!empty($username) && !empty($userpass)){
                         $query = "SELECT * FROM user_accounts WHERE user_name = '$username' LIMIT 1";
@@ -43,13 +43,13 @@
                                 header("location: index.php");
                                 die;
                             }else{
-                                echo "<p id='form-error'>Wrong Password.</p>";
+                                echo "<p id='form-error'>Wrong Password</p>";
                             }
                         }else{
-                            echo "<p id='form-error'>Username does not exist.</p>";
+                            echo "<p id='form-error'>Username does not exist</p>";
                         }
                     }else{
-                        echo "<p id='form-error'>Some information are empty.</p>";
+                        echo "<p id='form-error'>Some information are empty</p>";
                     }
                 }
             ?>
