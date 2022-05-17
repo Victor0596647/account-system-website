@@ -43,6 +43,7 @@ body {
   display:flex;
   flex-direction: column;
   margin:auto;
+  margin-top: 75px;
   background-color: lightblue;
   border-radius: 5px;
   max-width: 550px;

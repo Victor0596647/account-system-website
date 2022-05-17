@@ -34,6 +34,10 @@ body {
     cursor:pointer;
 }
 
+.main-content {
+    margin-top: 75px;
+}
+
 .data-container {
     margin:auto;
     width:-moz-fit-content;
